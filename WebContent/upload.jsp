@@ -79,7 +79,7 @@
             
             
             out.println("<p>a file Field</p>");
-            /*
+            
             String fieldName = item.getFieldName();
             String fileName = item.getName();
             String contentType = item.getContentType();
@@ -90,13 +90,14 @@
             out.println("contentType="+contentType+"<br>");
             out.println("isInMemory="+isInMemory+"<br>");
             out.println("sizeInBytes="+sizeInBytes+"<br>");
+            
             if (fileName != null && !"".equals(fileName)) {
                 fileName= FilenameUtils.getName(fileName);
                 out.println("fileName saved="+fileName+"<br>");
                 File uploadedFile = new File(saveDirectory, fileName);
                 item.write(uploadedFile);
             }
-            */
+            
         }
     }    
 %>
