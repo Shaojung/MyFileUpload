@@ -13,7 +13,6 @@
 	String saveDirectory = application.getRealPath("/upload");
 	out.println(saveDirectory);		// 設定好絕對路徑
     boolean isMultipart = ServletFileUpload.isMultipartContent(request);
-	
     out.println("<br />isMultipart="+isMultipart+"<br>");
     
     /*
@@ -68,12 +67,11 @@
             // Process a regular form field
             //processFormField(item);
             out.println("<p>a FormField</p>");
-            /*
+            
             String name = item.getFieldName();
-            String value = item.getString();
-            value = new String(value.getBytes("UTF-8"), "ISO-8859-1");
+            String value = item.getString("UTF-8");
             out.println(name + "=" + value+"<br>");
-            */
+            
             
         } else {
             // Process a file upload
